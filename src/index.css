@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.fullscreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.images {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 10;
+
+  width: 100%;
+  background-color: white; /* Background color can be anything */
+}
+
+@media only screen and (max-width: 480px) {
+  /* Styles for iPhone */
+  h1 {
+    display: flex;
+    justify-content: center;
+    margin: 10;
+
+    width: 100%;
+    background-color: white; /* Background color can be anything */
+  }
+  .images {
+    width: 50px;
+    height: 20px;
+    margin: 1px;
+  }
+    /* Add iPhone-specific styles here */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  /* Styles for tablet */
+  .images {
+    /* Add tablet-specific styles here */
+  }
 }
