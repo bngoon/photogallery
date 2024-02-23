@@ -11,7 +11,7 @@ function App() {
   const [urlsToDisplay, setUrlsToDisplay] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Link to Unsplash Search API Documentation: https://unsplash.com/documentation#search-photos
+  // Link to API https://unsplash.com/documentation#search-photos
   async function getPhotos() {
     try {
       const apiKey = "bBuKjLz1gVcMtrAfSAYcjFm12snEQDA_E6m4oL2lF_g";

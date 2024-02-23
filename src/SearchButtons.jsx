@@ -7,6 +7,7 @@ function SearchButtons() {
     <button className="btn" onclick=""> Nature</button>
     <button className="btn" onclick=""> Cars</button>
     <button className="btn" onclick=""> People</button>
+    <button className="btn" onclick=""> Food</button>
   </div>
   )
 }
