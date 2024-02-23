@@ -15,7 +15,7 @@ function Header() {
   
 </ul>
 <h1 className='header'>
-HELLO! WELCOME TO UNSPLASH PHOTO GALLERY WITH CREATIVE & UNIQUE STYLE</h1>
+HELLO! WELCOME TO UNSPLASH PHOTO GALLERY</h1>
  </nav>
    
     </div>
