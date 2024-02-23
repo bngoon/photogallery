@@ -1,6 +1,6 @@
 import React from "react";
 
-function Searchbar({ setSearchQuery, getUnsplashPhotos }) {
+function Searchbar({ setSearchQuery, getPhotos }) {
   return (
     <div className="searchbar">
     
@@ -10,7 +10,7 @@ function Searchbar({ setSearchQuery, getUnsplashPhotos }) {
           setSearchQuery(e.target.value);
         }}
       />
-      <button onClick={getUnsplashPhotos}>Submit</button>
+      <button onClick={getPhotos}>Submit</button>
       
     </div>
   );

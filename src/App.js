@@ -2,19 +2,22 @@ import { useState } from "react";
 import axios from "axios";
 import Header from "./Header";
 import Searchbar from "./Searchbar";
+import SearchButtons from "./SearchButtons";
 import "./App.css";
 import InfiniteScroll from "react-infinite-scroll-component";
+
 
 function App() {
   const [urlsToDisplay, setUrlsToDisplay] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
+
   // Link to Unsplash Search API Documentation: https://unsplash.com/documentation#search-photos
-  async function getUnsplashPhotos() {
+  async function getPhotos() {
     try {
       const apiKey = "bBuKjLz1gVcMtrAfSAYcjFm12snEQDA_E6m4oL2lF_g";
       let res = await axios.get(
-        `https://api.unsplash.com/search/photos?client_id=${apiKey}&query=${searchQuery}&per_page=24`
+        `https://api.unsplash.com/search/photos?client_id=${apiKey}&query=${searchQuery}&per_page=25`
       );
       // console.log( res.data.results);
       setUrlsToDisplay(res.data.results);
@@ -24,12 +27,14 @@ function App() {
   }
 
   return (
-    <main>
+    <div className="app">
       <Header />
-      <div className="fullscreen">
+      <div className="container">
+        <SearchButtons 
+        getUnsplashPhotos={getPhotos}/>
         <Searchbar
           setSearchQuery={setSearchQuery}
-          getUnsplashPhotos={getUnsplashPhotos}
+          getPhotos={getPhotos}
         />
         <div className="row">
           {urlsToDisplay.map((image) => {
@@ -43,7 +48,7 @@ function App() {
         </div>
         
       </div>
-    </main>
+    </div>
   );
 }
 

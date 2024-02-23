@@ -1,16 +1,27 @@
 import React from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
+import './Navbar.css'
 
 function Header() {
   return (
     <div className='headercontainer'>
-      <h1 className='header'>Unsplash Photo Gallery</h1>
+    
       <nav>
-       
-      </nav>
-      
+      <ul className='menu'>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+  <li><a href="signup.asp">Newsletter</a></li>
+  
+</ul>
+<h1 className='header'>
+HELLO! WELCOME TO UNSPLASH PHOTO GALLERY WITH CREATIVE & UNIQUE STYLE</h1>
+ </nav>
+   
     </div>
   );
 }
 
 export default Header;
+
+
