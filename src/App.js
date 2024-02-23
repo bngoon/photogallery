@@ -14,16 +14,17 @@ function App() {
   // Link to API https://unsplash.com/documentation#search-photos
   async function getPhotos() {
     try {
-      const apiKey = "bBuKjLz1gVcMtrAfSAYcjFm12snEQDA_E6m4oL2lF_g";
-      let res = await axios.get(
-        `https://api.unsplash.com/search/photos?client_id=${apiKey}&query=${searchQuery}&per_page=25`
-      );
-      // console.log( res.data.results);
-      setUrlsToDisplay(res.data.results);
+        const apiKey = "bBuKjLz1gVcMtrAfSAYcjFm12snEQDA_E6m4oL2lF_g";
+        const response = await fetch(
+            `https://api.unsplash.com/search/photos?client_id=${apiKey}&query=${searchQuery}&per_page=25`
+        );
+        const data = await response.json();
+        setUrlsToDisplay(data.results);
     } catch (e) {
-      console.log();
+        console.log(e);
     }
-  }
+}
+
 
   return (
     <div className="app">
